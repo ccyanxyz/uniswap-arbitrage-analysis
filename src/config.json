@@ -1,0 +1,89 @@
+{
+	"start": "weth",
+	"maxHops": 6,
+	"minProfit": 0.01,
+	"pairs": "random",
+	"pair_num": 1000,
+
+	"network": "mainnet",
+	"https": [
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx",
+		"https://mainnet.infura.io/v3/xxxx"
+	],
+	"local": {
+		"http": "http://127.0.0.1:8545",
+		"wss": "ws://127.0.0.1:8546"
+	},
+	"mainnet": {
+		"http": "https://mainnet.infura.io/v3/xxxxx",
+		"wss": "wss://mainnet.infura.io/ws/v3/xxxxx"
+	},
+	"ropsten": {
+		"http": "https://ropsten.infura.io/v3/xxxxx",
+		"wss": "wss://ropsten.infura.io/ws/v3/xxxxx"
+	},
+	"kovan": {
+		"http": "https://kovan.infura.io/v3/7aef3f0cd1f64408b163814b22cc643c",
+		"wss": "wss://kovan.infura.io/ws/v3/93ca33aa55d147f08666ac82d7cc69fd"
+	},
+	"gasnow_tx": "https://api.taichi.network:10001/rpc/public",
+	"gasnow": "https://gasnow.sparkpool.com/api/v3/gas/price",
+
+	"address": "xxxxxx",
+	"privkey": "xxxxxx",
+
+	"printer_sushi": "xxxxx",
+	"printer": {
+		"mainnet": "xxxxx",
+		"local": "xxxxx",
+		"ropsten": "xxxxx",
+		"kovan": "xxxxx"
+	},
+	"weth": {
+		"mainnet": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+		"local": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+		"ropsten": "0xc778417E063141139Fce010982780140Aa0cD5Ab",
+		"kovan": "0xd0A1E359811322d97991E03f863a0C30C2cF029C"
+	},
+	"usdt": {
+		"mainnet": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+		"local": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+		"ropsten": "",
+		"kovan": ""
+	},
+	"usdc": {
+		"mainnet": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+		"local": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+		"ropsten": "",
+		"kovan": "0xe22da380ee6B445bb8273C81944ADEB6E8450422"
+	},
+	"dai": {
+		"mainnet": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+		"local": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+		"ropsten": "0xaD6D458402F60fD3Bd25163575031ACDce07538D",
+		"kovan": "0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD"
+	},
+	"ycrv": {
+		"mainnet": "0xdF5e0e81Dff6FAF3A7e52BA697820c5e32D806A8",
+		"local": "0xdF5e0e81Dff6FAF3A7e52BA697820c5e32D806A8",
+		"ropsten": "",
+		"kovan": ""
+	}
+}

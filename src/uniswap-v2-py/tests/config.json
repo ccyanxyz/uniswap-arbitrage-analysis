@@ -1,0 +1,32 @@
+{
+  "account" : {
+    "address" : "0x09B487E73B4Ca5aEb7B108a9Ebd91d977Aa36648",
+    "private-key" : "fe7f7b941ee8a53d7da1d16e8d4093de26046e2566880e37611265f7c3813f2b"
+  },
+
+  "provider" : "https://rinkeby.infura.io/v3/8ce5c9d6732945bd9e8baa57c6798e0b",
+
+  "tokens" : [
+    {
+      "name": "PY-TEST-1",
+      "symbol": "PY1",
+      "supply": 100000000000000000000,
+      "decimals": 18,
+      "address": "0x009594a5b3a551f7955ea420231FbE8E47038E31"
+    },
+    {
+      "name": "PY-TEST-2",
+      "symbol": "PY2",
+      "supply": 200000000000000000000,
+      "decimals": 18,
+      "address": "0x197FA6456b4421e5fbE19CcF14edA15f786a6FEC"
+    },
+    {
+      "name": "PY-TEST-3",
+      "symbol": "PY3",
+      "supply": 300000000000000000000,
+      "decimals": 18,
+      "address": "0x92A0d649fa01C8b32337fBeD15A284051D97cAdc"
+    }
+  ]
+}

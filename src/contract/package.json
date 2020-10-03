@@ -1,0 +1,23 @@
+{
+  "name": "9-setup-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ethersproject/contracts": "^5.0.2",
+    "@ethersproject/providers": "^5.0.5",
+    "@ethersproject/solidity": "^5.0.2",
+    "@studydefi/money-legos": "^2.3.7",
+    "@truffle/artifactor": "^4.0.74",
+    "@truffle/hdwallet-provider": "^1.0.42",
+    "@uniswap/sdk": "^2.0.6",
+    "dotenv": "^8.2.0",
+    "web3": "^1.2.11"
+  }
+}

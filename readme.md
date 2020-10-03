@@ -160,8 +160,6 @@ Didn't cover the gas fee though :(
 
 Uniswap arbitrage is a competitive area, you may find it hard to make profit, but still, Defi is the haven for arbitraguers, you can also arbitrage between different exchanges like curve.fi, balancer.exchange, with flashloans, you can even borrow money to make arbitrage! Happy hacking :)
 
-Don't ask me for code, my code sucks, but maybe I'll push my code someday.
-
 Contact: ccyanxyz@gmail.com
 
 Donation: 0x0af66d3641640755878F0d72A610FC2EEA856Cd6
