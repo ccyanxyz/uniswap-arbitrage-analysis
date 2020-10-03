@@ -42,7 +42,7 @@ def process_receipts(receipts, pairsDict, pairs):
             # process event
             event = None
             if log['topics'][0] == sync_topic:
-                event = c.events.Sync.parseLog(log)
+                event = c.events.Sync().processLog(log)
                 pairs[pairsDict[log['address']]['arrIndex']]['reserve0'] = event['reserve0']
                 pairs[pairsDict[log['address']]['arrIndex']]['reserve1'] = event['reserve1']
     return pairs
