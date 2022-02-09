@@ -78,7 +78,7 @@ $$
 
 Replace $\Delta_b$ in (5) using (4), we have:
 $$
-\Delta_c = \frac{\frac{R_0{R_1}'}{{R_1}'+R_1r}r\Delta_a}{\frac{rR_1R_2}{{R_1}'+R_1r}+r\Delta_a} \tag6
+\Delta_c = \frac{\frac{rR_1R_2}{{R_1}'+R_1r}r\Delta_a}{\frac{R_0{R_1}'}{{R_1}'+R_1r}+r\Delta_a} \tag6
 $$
 Comparing the form of (6) and (4) or (6) and (5), we have:
 $$
