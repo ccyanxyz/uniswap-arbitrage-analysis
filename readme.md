@@ -55,8 +55,7 @@ $$
 & max  ({\Delta_a}' - \Delta_a) \\\\
 & s.t. \\
 & R_n > 0, \Delta_n > 0 \\\\
-& (R_0 + r\Delta_a)(R_1 - \Delta_b) = R_0R_1 \
-1 \\\\
+& (R_0 + r\Delta_a)(R_1 - \Delta_b) = R_0R_1 \tag1 \\\\
 & ({R_1}' + r\Delta_b)(R_2 - \Delta_c) = {R_1}'R_2 \tag2 \\\\
 & ({R_2}' + r\Delta_c)(R_3 - {\Delta_a}') = {R_2}'{R_1}' \tag3
 \end{align}
