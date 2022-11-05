@@ -49,6 +49,7 @@ $(R_0 + r\Delta_a)(R_1 - \Delta_b) = R_0R_1$
 The equation means that the product of the reserves $R_0R_1$ remains constant during the trade, this is why we call it constant function market maker.
 
 Now assume we have found a circle path: A->B->C->A, how do we find the optimal input amount? This is an optimization problem:
+
 $$
 \begin{align}
 & max  ({\Delta_a}' - \Delta_a) \\\\
@@ -59,6 +60,7 @@ $$
 & ({R_2}' + r\Delta_c)(R_3 - {\Delta_a}') = {R_2}'{R_1}' \tag3
 \end{align}
 $$
+
 Equation (1) holds during the trade from A to B, (2) holds during the trade from B to C, and (3) holds during the trade from C to A. It seems pretty simple since we only have 3 equations now, we can get the representation for ${\Delta_a}'$ in ${\Delta_a}$, then calculate the derivative of ${\Delta_a}' - \Delta_a$ to find out what the optimal ${\Delta_a}$ is.
 
 What if the path is longer? A->B->C->...->A. We need a general solution for arbitrary length path.
@@ -68,6 +70,7 @@ Consider the A->B->C situation, maybe there is not a trading pair directly from 
 All we need to do is find the representation for $E_0, E_1$ in $R_0, R_1, {R_1}', R_2$, i.e. the pool parameters of A->B and B->C.
 
 According to equation(1)(2), we have:
+
 $$
 \Delta_b = \frac{R_1r\Delta_a}{R_0+r\Delta_a} \tag4
 $$
@@ -77,10 +80,13 @@ $$
 $$
 
 Replace $\Delta_b$ in (5) using (4), we have:
+
 $$
 \Delta_c = \frac{\frac{rR_1R_2}{{R_1}'+R_1r}r\Delta_a}{\frac{R_0{R_1}'}{{R_1}'+R_1r}+r\Delta_a} \tag6
 $$
+
 Comparing the form of (6) and (4) or (6) and (5), we have:
+
 $$
 E_0 = \frac{R_0{R_1}'}{{R_1}'+R_1r}
 $$
@@ -92,16 +98,20 @@ $$
 Now we have the parameters for virtual pool A->C, consider the path A->B->C->A, with the virtual pool, the path is now: A->C->A, we can further calculate the parameters for A->A, say $E_a, E_b$, if  $E_a < E_b$, then there is an arbitrage opportunity. For arbitrary length path, we can calculate $E_a, E_b$ iteratively.
 
 Now we have the parameters $E_a, E_b$ for this virtual pool from A->A constructed from the given path, we have:
+
 $$
 \begin{align}
 & {\Delta_a}' = \frac{E_ar\Delta_a}{E_0+r\Delta_a} \\
 & f = {\Delta_a}' - \Delta_a
 \end{align}
 $$
+
 Here $f$ is our profit, calculate its derivative, we can find the optimal input amount:
+
 $$
 \Delta_a = \frac{\sqrt{E_aE_br}-E_a}{r}
 $$
+
 Code for path finding with optimal input amount calculation:
 
 ```python
