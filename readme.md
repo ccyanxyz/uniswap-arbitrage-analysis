@@ -101,7 +101,7 @@ Now we have the parameters $E_a, E_b$ for this virtual pool from A->A constructe
 
 $$
 \begin{align}
-& {\Delta_a}' = \frac{E_ar\Delta_a}{E_0+r\Delta_a} \\
+& {\Delta_a}' = \frac{E_ar\Delta_a}{E_b+r\Delta_a} \\
 & f = {\Delta_a}' - \Delta_a
 \end{align}
 $$
