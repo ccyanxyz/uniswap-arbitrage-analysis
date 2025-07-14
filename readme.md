@@ -15,7 +15,7 @@ In order to perform an arbitrage, we need to figure out 2 things:
 
 #### 1.1 Path finding
 
-Each coin is a vertex of a graph, and each trading pair is an edge in the graph, now the problem is how to find a circle in such a graph? This is a classic graph problem, we can use depth first search(DFS) to solve it, with DFS, we can also control the max path length, which is import for an arbitrage since longer path requires more gas! Here is a sample code:
+Each coin is a vertex of a graph, and each trading pair is an edge in the graph, now the problem is how to find a circle in such a graph? This is a classic graph problem, we can use depth first search(DFS) to solve it, with DFS, we can also control the max path length, which is important for an arbitrage since longer path requires more gas! Here is a sample code:
 
 ```python
 def findArb(pairs, tokenIn, tokenOut, maxHops, currentPairs, path, circles):
@@ -46,7 +46,7 @@ Let's do a little recap on the uniswap constant function market maker(CFMM) mode
 
 $(R_0 + r\Delta_a)(R_1 - \Delta_b) = R_0R_1$
 
-The equation means that the product of the reserves $R_0R_1$ remains constant during the trade, this is why we call it constant function market maker.
+The equation means that the product of the reserves $R_0R_1$ remains constant during/after the trade, this is why we call it a constant function market maker.
 
 Now assume we have found a circle path: A->B->C->A, how do we find the optimal input amount? This is an optimization problem:
 
@@ -150,11 +150,12 @@ def findArb(pairs, tokenIn, tokenOut, maxHops, currentPairs, path, bestTrades, c
 
 ### 2. Implementation
 
-Ethereum block interval is 15 seconds, you have to do 3 things in 15 seconds:
+Ethereum block interval is around 12 seconds (as of this writing), you have to do 3 things within 12 seconds more or less:
+(And Rust/Golang or C++ would be faster in terms of the performance, than Python, implementing the same logic)
 
 * Update the reserves of each trading pair:
   * Small amount of trading pairs: batch request for the states of all trading pairs
-  * Large amount of trading pairs: batch request, then parse every new block, if there is a event in (Swap, Sync, Mint, Burn), update the related pair reserves.
+  * Large amount of trading pairs: batch request, then parse every new block, if there is an event in (Swap, Sync, Mint, Burn), update the related pair reserves.
 * Find the best path and optimal input amount:
   * Optimize DFS, explore other algorithms like bellman-ford, spfa, etc.
 * Send the transaction:
@@ -168,7 +169,7 @@ Didn't cover the gas fee though :(
 
 ### 3.Finally
 
-Uniswap arbitrage is a competitive area, you may find it hard to make profit, but still, Defi is the haven for arbitraguers, you can also arbitrage between different exchanges like curve.fi, balancer.exchange, with flashloans, you can even borrow money to make arbitrage! Happy hacking :)
+Uniswap arbitrage is a competitive area, you may find it hard to make profit, but still, Defi is the haven for arbitrageurs, you can also arbitrage between different exchanges like curve.fi, balancer.exchange, with flashloans, you can even borrow money to make arbitrage! Happy hacking :)
 
 Contact: ccyanxyz@gmail.com
 
